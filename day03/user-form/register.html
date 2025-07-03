@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- SVG 로고 -->
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="blue" />
+        </svg>
+        <h1>User Registration</h1>
+
+        <!-- 내비게이션 -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 본문 시작 -->
+    <main>
+        <!-- 등록 섹션 -->
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="POST">
+
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div>
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="18" max="100" required>
+                </div>
+
+                <div>
+                    <label for="satisfaction">Satisfaction (1-10):</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+                </div>
+
+                <div>
+                    <label>Gender:</label><br>
+                    <input type="radio" id="gender_male" name="gender" value="male" required>
+                    <label for="gender_male">Male</label>
+                    <input type="radio" id="gender_female" name="gender" value="female">
+                    <label for="gender_female">Female</label>
+                    <input type="radio" id="gender_other" name="gender" value="other">
+                    <label for="gender_other">Other</label>
+                </div>
+
+                <div>
+                    <label>Interests:</label><br>
+                    <input type="checkbox" id="interest_coding" name="interests" value="coding">
+                    <label for="interest_coding">Coding</label>
+                    <input type="checkbox" id="interest_gaming" name="interests" value="gaming">
+                    <label for="interest_gaming">Gaming</label>
+                    <input type="checkbox" id="interest_reading" name="interests" value="reading">
+                    <label for="interest_reading">Reading</label>
+                </div>
+
+                <div>
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">--Select your country--</option>
+                        <option value="kr">South Korea</option>
+                        <option value="us">USA</option>
+                        <option value="jp">Japan</option>
+                        <option value="cn">China</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 사용자 등록 안내 섹션 -->
+        <article>
+            <h2>Why Register?</h2>
+            <p>Registering allows you to access exclusive features, receive updates, and participate in our community.</p>
+
+            <!-- Canvas 예시: JavaScript 없이 텍스트나 도형이 그려질 자리 -->
+            <canvas id="infoCanvas" width="300" height="100">
+                <!-- 사용자 등록 정보를 시각화하거나 안내 배너로 활용할 수 있음 -->
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </article>
+
+        <!-- 관련 정보 영역 (사이드바) -->
+        <aside>
+            <h3>Registration Tips</h3>
+            <ul>
+                <li>Use a valid email address</li>
+                <li>Password should be at least 8 characters</li>
+                <li>Make sure to select your interests</li>
+            </ul>
+
+            <!-- SVG 그래픽 하나 더 추가 -->
+            <svg width="100" height="50">
+                <rect x="10" y="10" width="80" height="30" fill="green" stroke="black" stroke-width="2" />
+            </svg>
+        </aside>
+
+    </main>
+    <footer>
+        <p>© 2025 Your Website</p>
+        <p><a href="#">Contact Us</a></p>
+        <!-- 비디오 콘텐츠 -->
+        <h4>Welcome Video</h4>
+        <video controls width="320" height="240">
+            <source src="media/test_video.mp4" type="video/mp4">
+        </video>
+        <br>
+        <!-- 오디오 콘텐츠 -->
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </footer>
+
+</body>
+</html>

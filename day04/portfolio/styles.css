@@ -1,0 +1,125 @@
+/* 기본 스타일 */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+}
+
+/* header 박스 모델 + sticky */
+header {
+    padding: 20px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* nav - flexbox 방식 */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* nav - float 방식  */
+nav ul li.float {
+    float: left;
+    margin-right: 20px;
+}
+
+/* projects 영역 - flexbox 방식 */
+#projects.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* projects 영역 - grid 방식 */
+#projects.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* project 박스 모델 */
+.project {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* project - float 방식  */
+.project.float {
+    float: left;
+    width: 30%;
+    margin: 1.66%;
+}
+
+/* aside 박스 모델 + position */
+aside {
+    padding: 10px;
+    border-left: 3px solid #007bff;
+    margin: 20px;
+    position: relative;
+}
+
+/* aside 내부 h3 - absolute */
+aside h3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* aside - float 방식  */
+aside.float {
+    float: right;
+    width: 25%;
+}
+
+/* section - float 방식  */
+section.float {
+    float: left;
+    width: 70%;
+}
+
+/* footer - display none */
+footer p:first-of-type {
+    display: none;
+}
+
+/* footer - clear: both  */
+footer {
+    clear: both;
+    padding: 20px 0;
+}

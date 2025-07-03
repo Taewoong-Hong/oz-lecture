@@ -1,0 +1,119 @@
+/* 기본선택자 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* 클래스선택자 */
+
+.form-group{
+    margin-bottom: 15px;
+
+}
+
+
+/* ID 선택자 */
+
+#registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* 속성선택자 */
+
+[type="text"],
+[type="email"],
+[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border:1px;
+    border-radius:4px;
+}
+
+input[type="submit"],
+input[type="reset"],
+button[type="submit"],
+button[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+/* 후손자식 선택자 */
+
+form p {
+    padding: 5px;
+}
+
+form > p {
+    border-bottom: 1px solid #eee;
+}
+
+form > p:first-child {
+    margin-top: 20px;
+}
+
+/* 태그선택자 */
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+select:hover {
+    border-color: #007bff;
+}
+
+select option:first-child {
+    font-weight: bold;
+}
+
+/* 제목 뒤에 장식 이모지 */
+h1::after {
+    content: "✨";
+    margin-left: 10px;
+}
+
+/* 각 form-group 요소 뒤에 구분선 */
+.form-group::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #ddd;
+    margin-top: 10px;
+}
+
+/* 필수 입력 라벨 뒤에 빨간색 별표 */
+label[for="name"]::after,
+label[for="email"]::after,
+label[for="password"]::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
