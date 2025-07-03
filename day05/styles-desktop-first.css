@@ -1,0 +1,53 @@
+/* 기본 스타일 */
+html {
+    font-size: 16px;
+}
+
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+
+/* 제목 스타일 */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background-color: lightblue;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* 메인 Flex-wrap */
+main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.box {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: lightcoral;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 태블릿 */
+@media (max-width: 1023px) {
+    main {
+        grid-template-columns: repeat(2,1fr);
+        }
+}
+
+/* 데스크톱 */
+
+@media (max-width: 727px) {
+    .main {
+        grid-template-columns: 1fr;
+        }
+}

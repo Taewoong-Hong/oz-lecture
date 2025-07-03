@@ -1,0 +1,103 @@
+/* ----------------------------------
+기본 스타일 (데스크톱 기준)
+---------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+header {
+    padding: 2rem;
+    border-bottom: 0.2rem solid #ccc;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+#posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.post {
+    padding: 1.5rem;
+    border: 0.2rem solid #ccc;
+}
+
+aside {
+    width: 25vw;
+    padding: 1.5rem;
+    margin-right: 2vw;
+    font-size: 1em;
+}
+
+section {
+    margin: 2vw;
+}
+
+footer {
+    padding: 1.5rem;
+    border-top: 0.2rem solid #ccc;
+    text-align: center;
+}
+
+/* ----------------------------------
+태블릿 (최대 1023px)
+---------------------------------- */
+@media screen and (max-width: 1023px) {
+    body {
+        max-width: 90vw;
+    }
+
+    #posts {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    aside {
+        width: 30vw;
+        margin-right: 1vw;
+    }
+}
+
+/* ----------------------------------
+모바일 (최대 767px)
+---------------------------------- */
+@media screen and (max-width: 767px) {
+    body {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #posts {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    aside {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
