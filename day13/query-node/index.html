@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Day13 query-node</title>
+    </head>
+    <body>
+        <article class = "box-1">
+            <p class = "text"> text-1</p>
+            <p class = "text"> text-2</p>   
+        </article>
+        <article class = "box-2">
+            <p class = "text"> text-1</p>
+            <p class = "text"> text-2</p>   
+        </article>
+
+    </body>
+    <script>
+        const box2els = document.querySelectorAll(".box-2 p.text");
+        // box-2의 class가 text를 포함한 첫번째 p 태그를 찾는다.
+        const firstEl = box2els[0];
+        console.log(firstEl);
+        // box-2의 class가 text를 포함한 두번째 p 태그를 찾는다.
+        const secondEl = box2els[1];
+        console.log(secondEl);
+
+        const querytextels = document.querySelectorAll(".text");
+        console.log(querytextels);
+
+        const box2textEl = document.querySelector(".box-2 .text:first-child");
+        console.log("textContent", box2textEl.textContent);
+        console.log("innerText", box2textEl.innerText);
+        console.log("innerHtml", box2textEl.innerHTML);
+
+    </script>
+</html>

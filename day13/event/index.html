@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Day 13</title>
+
+    </head>
+    <body>
+    <!-- 인라인 이벤트 -->
+    <button onclick="clickEvent()">클릭</button>
+    <input 
+        id="text-input" 
+        type="text" 
+        onfocus="focusEvent()" 
+        onblur="blurEvent()" />
+
+    <!-- 프로퍼티 이벤트 -->
+    <button id="click-btn">클릭</button>
+
+    <!-- addEventListener 이벤트 -->
+    <button id="event-btn">클릭</button>
+
+    <script>
+        // ✅ 프로퍼티 방식
+        const clickBtnEl = document.querySelector("#click-btn");
+        clickBtnEl.onclick = function () {
+            alert("Click by property listener");
+        };
+
+        // ✅ addEventListener 방식
+        const eventBtnEl = document.querySelector("#event-btn");
+        eventBtnEl.addEventListener("click", function () {
+            alert("Click by addEventListener");
+        });
+
+        // ✅ 인라인 이벤트 핸들러 정의
+        function clickEvent() {
+            if (confirm("정말 클릭할까요?")) {
+            alert("확인 클릭됨");
+            } else {
+            alert("취소 클릭됨");
+            }
+        }
+
+        function focusEvent() {
+            console.log("Focus 되었음!");
+        }
+
+        function blurEvent() {
+            console.log("Blur 되었음!");
+        }
+
+        //event 객체확인
+        const inputEl = document.querySelector("#text-input");
+        inputEl.addEventListener("keydown", function (event) {
+            console.log(event);
+            console.log(event.keyCode);
+            console.log(event.key);
+        });
+
+        
+    </script>
+    </body>
+
+</html>

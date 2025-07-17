@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Day13 control-node</title>
+        <style>
+            .active {
+                color : #FF42D2;
+                background-color : #000000;
+                font-size : 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p id="text">text</p>
+            <p class = "hl active">하이라이트</p>
+        </div>
+        <div id = "container">
+            <p class="items">items</p>
+            <p class="items">items</p>
+            <p class="items">items</p>
+            <p class="items">items</p>
+            <p class="items">items</p>
+            <p class="items">items</p>
+        </div>
+    </body>
+    <script>
+        //element style 직접 조정
+        const pEl = document.querySelector("p");
+        pEl.style.color = "#FF42D2";
+        pEl.style.backgroundColor = "#000000";
+        pEl.style.fontSize = "30px";
+        pEl.style.fontWeight = "bold";
+
+        let isHightlight = true;
+
+        // if active 적용, else active 제거
+        if (isHightlight) {
+            const hl = document.querySelector(".hl");
+            hl.classList.add("active");
+        } else {
+            const hl = document.querySelector(".hl");
+            hl.classList.remove("active");
+        }
+
+        const itemList = items.querySelectorAll(".items");  
+        const parent = items[0].parentNode;
+        parent.removeChild(items[0]);
+
+        // 요소 추가하기
+        const aEl = document.createElement("a");              // <a> 요소 생성
+        document.body.appendChild(aEl);                       // body에 aEl 추가
+
+        const txtEl = document.createTextNode("OZ코딩");      // 텍스트 노드 생성
+        document.querySelector("a").appendChild(txtEl);       // a 안에 텍스트 추가
+
+        const hrefAttr = document.createAttribute("href");    // href 속성 생성
+        hrefAttr.value = "https://www.ozcodingschool.com";    
+        document.querySelector("a").setAttributeNode(hrefAttr); // href 속성 a에 추가
+
+        // 요소 수정하기
+        aEl.innerHTML = "OZ코딩 바로가기";                   // innerHTML로 내용 수정
+        aEl.textContent = "OZ코딩 바로가기(textContent)";     // textContent로 내용 수정
+        
+        const textEl = document.querySelector("#text");
+        textEl.remove() ;
+
+        //요소의 부모를 찾아서 삭제하기
+        const items = document.querySelectorAll(".item");
+        console.log(items);
+        console.log(items[0],parentNode);
+        // items[0].parentNode.removeChild(items[0]);    // 자식 요소 자신 삭제
+        items[0].parentNode.removeChild(items[0]); // 자식 요소 전체 삭제
+        
+    </script>
+</html>
