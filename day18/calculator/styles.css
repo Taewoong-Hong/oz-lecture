@@ -1,0 +1,111 @@
+/* 기본 세팅 */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #e0ecff, #f0f4ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  width: 320px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #274472;
+}
+
+.display {
+  background-color: #f4f6fa;
+  border: 2px solid #c9d9f0;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 20px;
+  color: #333;
+  min-height: 40px;
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 15px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f4ff;
+  color: #274472;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #d7e3fc;
+}
+
+button:active {
+  background-color: #aac8f6;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #7ca7e2;
+}
+
+button:nth-child(4),
+button:last-child {
+  background-color: #e8f0ff;
+  color: #1c3f75;
+}
+
+button:nth-child(4):hover,
+button:last-child:hover {
+  background-color: #c3dafc;
+}
+
+/* 결과창 스타일 */
+#result {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.alert-info {
+  background-color: #d7eafc;
+  color: #1c3f75;
+}
+
+.alert-danger {
+  background-color: #fde2e2;
+  color: #a33;
+}
+
+.d-none {
+  display: none;
+}
